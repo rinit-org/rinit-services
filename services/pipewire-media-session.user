@@ -1,0 +1,11 @@
+name = pipewire-media-session
+type = longrun
+
+[run]
+prefix = bash
+execute = (
+  pipewire-media-session
+)
+
+[options]
+dependencies =[ pipewire ]

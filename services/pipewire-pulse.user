@@ -1,0 +1,11 @@
+name = pipewire-pulse
+type = longrun
+
+[run]
+prefix = bash
+execute = (
+  pipewire-pulse
+)
+
+[options]
+dependencies =[ pipewire ]

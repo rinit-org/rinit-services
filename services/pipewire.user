@@ -1,0 +1,8 @@
+name = pipewire
+type = longrun
+
+[run]
+prefix = bash
+execute = (
+  pipewire
+)
