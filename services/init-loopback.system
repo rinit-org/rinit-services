@@ -1,0 +1,8 @@
+name = init-loopback
+type = oneshot
+
+[start]
+prefix = bash
+execute =(
+    ip link set up dev lo
+)

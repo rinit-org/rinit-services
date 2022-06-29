@@ -1,0 +1,14 @@
+name = init-sysctl
+type = oneshot
+
+[start]
+prefix = bash
+execute =(
+    # load kernel options from /etc/sysctl.conf, don't echo variable set
+    sysctl --load --quiet
+)
+
+[options]
+dependencies =[
+    mount-filesystem
+]

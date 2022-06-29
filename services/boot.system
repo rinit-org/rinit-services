@@ -1,0 +1,17 @@
+name = boot
+type = bundle
+
+[options]
+contents = [
+    fsck
+    init-console
+    init-loopback
+    init-run
+    init-sysctl
+    mount-fstab
+    mount-filesystem
+    mount-rwfs
+    rescue-tty
+]
+
+#    hostname

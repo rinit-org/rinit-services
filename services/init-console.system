@@ -1,0 +1,13 @@
+name = init-console
+type = oneshot
+
+[start]
+prefix = bash
+execute =(
+    font=/usr/share/kbd/consolefonts/lat9w-16.psfu.gz
+    keymap=us
+    for i in {1..12}; do
+        setfont $font -C /dev/tty${i}
+        loadkeys --console /dev/tty${i} $keymap
+    done
+)

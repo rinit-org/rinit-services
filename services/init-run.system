@@ -1,0 +1,10 @@
+name = init-run
+type = oneshot
+
+[start]
+prefix = bash
+execute =(
+    for dir in lvm user lock; do
+        mkdir -p -m 0755 /run/$dir
+    done
+)

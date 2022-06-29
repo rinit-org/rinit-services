@@ -1,0 +1,8 @@
+name = hostname
+type = oneshot
+
+[start]
+prefix = bash
+execute =(
+    hostname --boot --file /etc/hostname
+)

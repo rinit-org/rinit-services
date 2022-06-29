@@ -1,0 +1,13 @@
+name = mount-rwfs
+type = oneshot
+
+[start]
+prefix = bash
+execute =(
+    mount -o remount,rw /
+)
+
+[options]
+dependencies =[
+    fsck
+]

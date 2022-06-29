@@ -1,0 +1,13 @@
+name = mount-filesystem
+type = oneshot
+
+[start]
+prefix = bash
+execute =(
+    mount -o nosuid,noexec,nodev -t proc proc /proc
+    mount -o nosuid,noexec,nodev -t sysfs sys /sys
+    mkdir /dev/shm
+    mount -o mode=1777,nosuid,nodev -t tmpfs shm /dev/shm
+    mkdir /dev/pts
+    mount -o mode=0620,gid=5,nosuid,noexec -t devpts devpts /dev/pts
+)

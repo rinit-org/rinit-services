@@ -1,0 +1,13 @@
+name = mount-fstab
+type = oneshot
+
+[start]
+prefix = bash
+execute =(
+    mount --all
+)
+
+[options]
+dependencies =[
+    fsck mount-rwfs
+]

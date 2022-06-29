@@ -1,0 +1,12 @@
+name = fsck
+type = oneshot
+
+[start]
+prefix = sh
+execute =(
+    # -A check all filesystems
+    # -p in parallel
+    # -T skip title on startup
+    # -R skip root, as it's already mounted in rw
+    fsck -A -p -T -R
+)

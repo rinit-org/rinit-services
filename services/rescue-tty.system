@@ -1,0 +1,10 @@
+name = rescue-tty
+type = longrun
+
+[run]
+prefix = bash
+execute = (
+    echo "START"
+    agetty -J 9600 tty12
+    echo "STOP"
+)
