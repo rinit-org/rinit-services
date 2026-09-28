@@ -1,4 +1,4 @@
-name = pipewire
+name = wpaperd
 type = longrun
 
 [run]
